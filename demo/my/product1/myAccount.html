@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/jquery.selectlist.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+<div>
+    <div id="header">
+        <div class="wrap clearfix">
+            <div class="clearfix">
+                <ul class="header_nav fr">
+                    <li>您好！欢迎<span class="admin">demo</span>登入</li>
+                    <li>
+                        <img src="img/quit.png" alt="">
+                        <a href="#" class="quit">退出</a>
+                    </li>
+                    <li class="my" id="me">
+                        <img class="img1" src="img/me.png" alt="">
+                        <a href="#" id="my" class="op">我的账户</a>
+                        <img class="img2" src="img/down.png" alt="">
+                        <ul class="sub_ul" id="ul">
+                            <li><a href="myAccount.html">我的账户</a></li>
+                            <li><a href="#">我的优惠</a></li>
+                            <li><a href="favorites.html">我的收藏</a></li>
+                            <li><a href="#">我的交易记录</a></li>
+                        </ul>
+                    </li>
+                    <li class="help" id="helpLi">
+                        <img src="img/help.png" alt="">
+                        <a href="#" id="help">帮助中心</a>
+                        <img src="img/down.png" alt="">
+                        <ul class="sub_help">
+                            <li><a href="#">分店资料</a></li>
+                            <li><a href="#">订购须知</a></li>
+                            <li><a href="#">落单流程</a></li>
+                            <li><a href="#">提供建议</a></li>
+                            <li><a href="#">图文教程</a></li>
+                            <li><a href="#">视频教程</a></li>
+                            <li><a href="#">常见问题</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="img/shopping.png" alt="">
+                        <a href="shopCar.html" class="shop">购物车</a>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="logo fl"><img src="img/logo.jpg" alt=""></h3>
+            <div class="header_img fr">
+                <img src="img/1.jpg" alt="">
+                <img src="img/2.jpg" alt="">
+                <img src="img/3.jpg" alt="">
+                <img src="img/4.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="nav">
+    <div class="wrap clearfix">
+        <ul class="nav_ul">
+            <li><a href="index.html">首页</a></li>
+            <li class="order"><a href="#" class="down">订单管理</a>
+                <ul class="sub_order">
+                    <li><a href="#">我要落单</a></li>
+                    <li><a href="MyOrder.html">我的订单</a></li>
+                    <li><a href="shopCar.html">我的购物车</a></li>
+                    <li><a href="#">线上确认稿件</a></li>
+                    <li><a href="#">问题稿件</a></li>
+                </ul>
+            </li>
+            <li class="price"><a href="#" class="down">报价管理</a>
+                <ul class="price_ul">
+                    <li><a href="#">我要落单</a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="shopCar.html">我的购物车</a></li>
+                </ul>
+            </li>
+            <li class="trade-manege"><a href="#" class="down">交易管理</a>
+                <ul class="trade_ul">
+                    <li><a href="trade.html">我的交易记录</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="nav_r">
+            <span>我要落单</span>
+            <span>我要报价</span>
+            <span>立即付款</span>
+        </div>
+        <div class="nav_side">
+            <span>高速上传软件</span>
+            <a href="file/EOIE10-WindowsXP-x86.exe">按此下载</a>
+        </div>
+    </div>
+</div>
+<div class="wrap">
+    <div id="content">
+        <div class="clearfix Wcontainer">
+            <div class="my_order"><h4 class="fl">我的信息</h4></div>
+            <div class="right_main">
+                <div class="tab_title">
+                    <span class="click">基本信息</span>
+                    <span>修改密码</span>
+                    <span>收货地址</span>
+                </div>
+
+                <div class="tab">
+                    <div class="tab_con">
+                        <span>* 如果所填写昵称已被用过的则需重新填写</span>
+
+                        <div class="basic">
+                            <form action="" method="get">
+                                <table width="100%" border="0">
+                                    <tr>
+                                        <td width="90">用户名：</td>
+                                        <td colspan="2">demo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>昵称：</td>
+                                        <td colspan="2"><input type="text" value="test" class="fl"/>
+                                            <p>* 由字母a～z(不区分大小写)、数字0～9、小数点、减号或下划线组成</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>E-mail:</td>
+                                        <td colspan="2"><input type="email" value="test@163.com"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>手机:</td>
+                                        <td colspan="2"><input type="tel" value="12345678900"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>性别：</td>
+                                        <td colspan="2">
+                                            <input type="radio" name="R1" id="R1-1" checked><label
+                                                for="R1-1">●</label><span>男</span>
+                                            <input type="radio" name="R1" id="R1-2"><label
+                                                for="R1-2">●</label><span>女</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>年龄：</td>
+                                        <td colspan="2">
+                                            <div class="info">
+                                                <select id="age" name="choose" class="select">
+                                                    <option value="0">20周岁以下</option>
+                                                    <option value="1">20周岁~30周岁</option>
+                                                    <option value="2">30周岁~40周岁</option>
+                                                    <option value="3">40周岁~50周岁</option>
+                                                    <option value="3">50周岁以上</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>账号类型：</td>
+                                        <td colspan="2">
+                                            <div class="info">
+                                                <select id="account" name="choose" class="select">
+                                                    <option value="0">企业</option>
+                                                    <option value="1">个人</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>所属行业：</td>
+                                        <td width="210">
+                                            <div class="info">
+                                                <select id="trade" name="choose" class="select">
+                                                    <option value="0">互联网</option>
+                                                    <option value="1">金融</option>
+                                                    <option value="2">IT</option>
+                                                    <option value="3">其他</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="other" placeholder="其他"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>所属职业：</td>
+                                        <td width="210">
+                                            <div class="info">
+                                                <select id="job" name="choose" class="select">
+                                                    <option value="0">经理</option>
+                                                    <option value="1">职员</option>
+                                                    <option value="2">采购</option>
+                                                    <option value="3">其他</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td><input type="text" class="other" placeholder="其他"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>所属地区：</td>
+                                        <td colspan="2">
+                                            <div class="info fl">
+                                                <select id="area1" name="choose" class="select">
+                                                    <option value="0">广东省</option>
+                                                    <option value="1">广东省</option>
+                                                    <option value="2">广东省</option>
+                                                    <option value="3">广东省</option>
+                                                </select>
+                                            </div>
+                                            <div class="info fl">
+                                                <select id="area2" name="choose" class="select">
+                                                    <option value="0">深圳市</option>
+                                                    <option value="1">深圳市</option>
+                                                    <option value="2">深圳市</option>
+                                                    <option value="3">深圳市</option>
+                                                </select>
+                                            </div>
+                                            <div class="info fl">
+                                                <select id="area3" name="choose" class="select">
+                                                    <option value="0">罗湖区</option>
+                                                    <option value="1">罗湖区</option>
+                                                    <option value="2">罗湖区</option>
+                                                    <option value="3">罗湖区</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="2">
+                                            <div class="btn">
+                                                <a><input type="submit" value="保存" class="fl"/></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="tab_con hide">
+                        <div class="basic password">
+                            <form action="" method="get">
+                                <table border="0">
+                                    <tr>
+                                        <td>原登录密码：</td>
+                                        <td><input type="password" maxlength="20"/></td>
+                                        <td><!--<span>* 密码错误，请重新填写</span>--></td>
+                                    </tr>
+                                    <tr>
+                                        <td>新登录密码：</td>
+                                        <td><input type="password" maxlength="20" class="admin-pwd"/>
+                                            <span>* 由字母a～z(區分大小寫)、數字0～9、特殊符号组成</span>
+                                        </td>
+                                        <td><!--<span>* 密码需在8~20位数之间</span>-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>确认新密码：</td>
+                                        <td><input type="password" maxlength="20"/></td>
+                                        <td><!--<span>* 密码不一致，请重新填写</span>--></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <div class="btn">
+                                                <a><input type="submit" value="确认修改" class="fl"/></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- 基本信息 End -->
+                    <div class="tab_con hide">
+                        <div class="basic">
+                            <form action="" method="get">
+                                <table width="100%" border="0">
+                                    <tr>
+                                        <td>所属地区：</td>
+                                        <td colspan="2">
+                                            <div class="info fl">
+                                                <select id="area4" name="choose" class="select">
+                                                    <option value="0">广东省</option>
+                                                    <option value="1">广东省</option>
+                                                    <option value="2">广东省</option>
+                                                    <option value="3">广东省</option>
+                                                </select>
+                                            </div>
+                                            <div class="info fl">
+                                                <select id="area5" name="choose" class="select">
+                                                    <option value="0">深圳市</option>
+                                                    <option value="1">深圳市</option>
+                                                    <option value="2">深圳市</option>
+                                                    <option value="3">深圳市</option>
+                                                </select>
+                                            </div>
+                                            <div class="info fl">
+                                                <select id="area6" name="choose" class="select">
+                                                    <option value="0">罗湖区</option>
+                                                    <option value="1">罗湖区</option>
+                                                    <option value="2">罗湖区</option>
+                                                    <option value="3">罗湖区</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="90">详细地址：</td>
+                                        <td colspan="2"><textarea name="" cols="" rows=""></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="90">邮政编码：</td>
+                                        <td colspan="2"><input type="text"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="90">收货人姓名：</td>
+                                        <td colspan="2"><input type="text"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>联系电话:</td>
+                                        <td colspan="2"><input type="tel"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="2"><input type="checkbox" id="checkbox-1"/><label for="checkbox-1">✔</label>设置成默认收货地址
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="2">
+                                            <div class="btn">
+                                                <a><input type="submit" value="保存" class="fl"/></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                        <!-- 修改 密码 End -->
+                        <div class="save_address">
+                            <h6 class="save-add">已保存的收货地址</h6>
+                            <div class="address">
+                                <table width="100%" border="0" class="line">
+                                    <tr>
+                                        <th scope="col">序号</th>
+                                        <th scope="col">收货人</th>
+                                        <th scope="col">所在地区</th>
+                                        <th scope="col">详细地址</th>
+                                        <th scope="col">邮编</th>
+                                        <th scope="col">电话</th>
+                                        <th scope="col" width="180">操作</th>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>test</td>
+                                        <td>xxxxxxxxxxxxxxx</td>
+                                        <td>xxxxxxxxxxxxxxx</td>
+                                        <td>123456</td>
+                                        <td>12345678900</td>
+                                        <td>
+                                            <span><a>删除</a></span>
+                                            <span><a>修改</a></span>
+                                            <div class="btn">
+                                                <a><input type="submit" value="设为默认"/></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>test</td>
+                                        <td>xxxxxxxxxxxxxxx</td>
+                                        <td>xxxxxxxxxxxxxxx</td>
+                                        <td>123456</td>
+                                        <td>12345678900</td>
+                                        <td>
+                                            <span><a>删除</a></span>
+                                            <span><a>修改</a></span>
+                                            <div class="btn default">
+                                                <a><input type="submit" value="默认地址"/></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tab_wrap">
+                                <h6>共1页</h6>
+                                <div class="tab">
+                           <span>
+                             <form action="#" class="page">
+                                <select id="tab_bottom" name="choose" class="select">
+                                  <option value="0">第1页</option>
+                                  <option value="1">第2页</option>
+                                  <option value="2">第3页</option>
+                                  <option value="3">第4页</option>
+                                </select>
+                            </form>
+                          </span>
+                                    <span class="tab_list">
+                             <ul>
+                                 <li> <a> < </a> </li>
+                                 <li> <a class="active">1</a> </li>
+                                 <li> <a>2</a> </li>
+                                 <li> ... </li>
+                                 <li> <a>5</a> </li>
+                                 <li> <a> > </a> </li>
+                             </ul>
+                          </span>
+                                </div>
+                            </div>
+                        </div><!--地址 End-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <include file="footer.html" /> -->
+<!-- <iframe src="footer.html" frameborder="0" width="100%" height="100%"></iframe> -->
+<div id="footer">
+    <div class="img_list fl">
+        <img src="img/b6.jpg" alt="">
+        <img src="img/b7.jpg" alt="">
+        <img src="img/b8.jpg" alt="">
+        <img src="img/b9.jpg" alt="">
+        <img src="img/VISA.png" alt="">
+        <img src="img/b2.png" alt="">
+        <img src="img/b1.png" alt="">
+        <img src="img/b5.jpg" alt="">
+        <img src="img/cn.jpg" alt="">
+    </div>
+    <div class="footer_list fr">
+        <ul>
+            <li class="copyright"><span>Copyright© xxx All right reseved.</span></li>
+            <li class="notice"><a href="#">公告</a></li>
+            <li class="service"><a href="#">在线客服</a><img src="img/kefu.png" alt=""></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

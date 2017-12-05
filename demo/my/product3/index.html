@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+    
+    
+    <title>选择</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+		
+	
+	<script src="html5shiv.js"></script>
+	<script src="jquery.min.js"></script>
+	<script src="jquery.selectlist.js"></script>
+	<script src="effect.js"></script>
+  <script type="text/javascript">
+   	$(function(){
+  		var colorSelect = $("#colorSelect");
+  		var color = colorSelect.find("option:selected").val();
+		colorSelect.attr("style","background-color:" + color);
+  	})
+  	$(function(){
+  		$(".openAndClose").each(function(){
+  			$(this).click(function(){
+  				var flag = $(this).parent().next().attr("flag");
+  				if("none" == flag){
+					$(this).html("-");
+					$(this).parent().next().attr("style","");
+					$(this).parent().next().attr("flag","block");
+				}else if("block" == flag){
+					$(this).html("+");
+					$(this).parent().next().attr("style","display:none;");
+					$(this).parent().next().attr("flag","none");
+				}  				
+  			});
+  		});
+/* 	  	$("input[type=radio]").each(function(){
+			$(this).change(function(){
+				$("#show").html("");
+				$("input[type=radio]:checked").each(function(){
+					var checkedContent = $(this).next().html();
+					$("#show").html($("#show").html() + "&nbsp;" + checkedContent);
+				});
+			});  		
+	  	}); */
+  		$("#registerform").submit(function(){
+  			  //获取所有选中的复选框
+			  var rads = $("input[type=radio]:checked");
+			  var colorParentTemplateId = $("#colorParentTemplateId").val();
+			  
+			  var reg =  /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;
+			  if($("#templatePrice").val().trim() == ""){
+			  	  alert('价格格式错误');
+			  	  return false;
+			  }else{
+				  if(!reg.test($("#templatePrice").val())){
+				  	 alert('价格格式错误');
+					 return false;
+				  }
+			  }
+			  
+			  if(rads.length == 0 && (colorParentTemplateId == "" || colorParentTemplateId == null || colorParentTemplateId == undefined)){
+				alert("请选择分类");
+				return false;			  
+			  }
+			  var colors = $(".color_list").find(".hover");
+			  if(colors.length <= 0){
+			  	alert("请选择颜色");
+			  	return false;
+			  }
+			  var str = "";
+			  if(rads != null){
+				  for(var i = 0 ; i < rads.length ; i++){
+						if(i < rads.length - 1){
+							str += $(rads[i]).val() + ",";
+						}else{
+							str += 	$(rads[i]).val();												
+						}
+				  } 
+			  }
+			// $("#registerform").append("<input type='hidden' name='classifyIds' value='" + str + "'/>");
+			// $("#registerform").append("<input type='hidden' name='colorHex' value='" +  $(colors[0]).attr("hex") + "'/>");
+			// $("#registerform").attr("action","http://localhost:8080/lukis/design/design_designTemplate.action");
+  		});
+  		 $("#reset").click(function(){
+  		 	$("input[type='radio']").removeAttr('checked');
+  			$("#show").html("");
+  		});
+  		$("#colorSelect").change(function(){
+			var color = $(this).find("option:selected").val();
+			$(this).attr("style","background-color:" + color);
+  		})
+  	});
+  	function loadCheckedClassify(){
+		$("input[type=radio]:checked").each(function(){
+			var checkedContent = $(this).next().html();
+			$("#show").html($("#show").html() + "&nbsp;" + checkedContent);
+		});
+  	}
+  </script>
+<link media="all" href="index.css" type="text/css" rel="stylesheet">
+</head>
+<body onload="loadCheckedClassify()">
+    <form id="registerform" method="post" action="">
+     <div id="design_hou">
+		<div class="design_choose">
+	      	   <!-- 判斷是添加主模板還是子模板 -->
+	         	
+					<!-- 判断一级分类下有没有二级分类 -->
+	         		
+						<!-- 一级 -->
+						<div class="design_first">方向
+</div>      
+						
+						<!-- 二级  -->
+						<ul style="display: none;" class="design_ul">		
+		         			
+		         			 	
+				         			<li>
+										<input class="design_radio" checked="checked" value="130" name="classify1" id="classify1-1" type="radio">
+										<label for="classify1-1">横卡
+</label>
+									</li>
+				         			  
+		         			
+		         			 	
+				         			<li>
+										<input class="design_radio" value="131" name="classify1" id="classify1-2" type="radio">
+										<label for="classify1-2">竖卡
+</label>
+									</li>
+				         			  
+		         			
+	         			</ul>
+	         		
+
+	         	
+					<!-- 判断一级分类下有没有二级分类 -->
+	         		
+						<!-- 一级 -->
+						<div class="design_first">风格&amp;主题
+</div>      
+						
+						<!-- 二级  -->
+						<ul style="display: none;" class="design_ul">		
+		         			
+		         			 	
+				         			<li>
+										<input class="design_radio" value="134" name="classify2" id="classify2-1" type="radio">
+										<label for="classify2-1">黑体
+</label>
+									</li>
+				         			  
+		         			
+		         			 	
+				         			<li>
+										<input class="design_radio" value="135" name="classify2" id="classify2-2" type="radio">
+										<label for="classify2-2">保守的
+</label>
+									</li>
+				         			  
+		         			
+	         			</ul>
+	         		
+
+	         	
+					<!-- 判断一级分类下有没有二级分类 -->
+	         		
+						<!-- 一级 -->
+						<div class="design_first">分类
+</div>      
+						
+						<!-- 二级  -->
+						<ul style="display: none;" class="design_ul">		
+		         			
+		         			 	
+									<li>
+										<p class="subdesign_choose twoTemplate">商业
+</p>
+											
+									    <ul style="display: none;" class="sub_ul">
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="138" id="classify3-1-1" name="classify3" type="radio">
+													<label for="classify3-1-1">农业与农业
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="139" id="classify3-1-2" name="classify3" type="radio">
+													<label for="classify3-1-2">动物与宠物护理
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="140" id="classify3-1-3" name="classify3" type="radio">
+													<label for="classify3-1-3">艺术与娱乐
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="141" id="classify3-1-4" name="classify3" type="radio">
+													<label for="classify3-1-4">汽车与运输
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="142" id="classify3-1-5" name="classify3" type="radio">
+													<label for="classify3-1-5">美容与水疗
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="143" id="classify3-1-6" name="classify3" type="radio">
+													<label for="classify3-1-6">商务服务
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="144" id="classify3-1-7" name="classify3" type="radio">
+													<label for="classify3-1-7">建设，维修和改善
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="145" id="classify3-1-8" name="classify3" type="radio">
+													<label for="classify3-1-8">金融保险
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="146" id="classify3-1-9" name="classify3" type="radio">
+													<label for="classify3-1-9">食品饮料
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="147" id="classify3-1-10" name="classify3" type="radio">
+													<label for="classify3-1-10">健康与社会服务
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="148" id="classify3-1-11" name="classify3" type="radio">
+													<label for="classify3-1-11">信息与技术
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="149" id="classify3-1-12" name="classify3" type="radio">
+													<label for="classify3-1-12">Law，公共安全与政治
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="150" id="classify3-1-13" name="classify3" type="radio">
+													<label for="classify3-1-13">制造业
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="151" id="classify3-1-14" name="classify3" type="radio">
+													<label for="classify3-1-14">营销与传播
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="152" id="classify3-1-15" name="classify3" type="radio">
+													<label for="classify3-1-15">房地产
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="153" id="classify3-1-16" name="classify3" type="radio">
+													<label for="classify3-1-16">宗教与精神
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="154" id="classify3-1-17" name="classify3" type="radio">
+													<label for="classify3-1-17">零售及销售
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="155" id="classify3-1-18" name="classify3" type="radio">
+													<label for="classify3-1-18">运动与健身
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="156" id="classify3-1-19" name="classify3" type="radio">
+													<label for="classify3-1-19">旅游及住宿
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="157" id="classify3-1-20" name="classify3" type="radio">
+													<label for="classify3-1-20">使用您的照片和标志
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="158" id="classify3-1-21" name="classify3" type="radio">
+													<label for="classify3-1-21">计算机及信息
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="159" id="classify3-1-22" name="classify3" type="radio">
+													<label for="classify3-1-22">咨询招聘
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="160" id="classify3-1-23" name="classify3" type="radio">
+													<label for="classify3-1-23">设计与建筑
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="161" id="classify3-1-24" name="classify3" type="radio">
+													<label for="classify3-1-24">教育与培训
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="162" id="classify3-1-25" name="classify3" type="radio">
+													<label for="classify3-1-25">流行服饰
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="163" id="classify3-1-26" name="classify3" type="radio">
+													<label for="classify3-1-26">花店、园艺和景观美化
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="164" id="classify3-1-27" name="classify3" type="radio">
+													<label for="classify3-1-27">市场营销和公关
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="165" id="classify3-1-28" name="classify3" type="radio">
+													<label for="classify3-1-28">医学，牙科和兽医
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="166" id="classify3-1-29" name="classify3" type="radio">
+													<label for="classify3-1-29">音乐DJ
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="167" id="classify3-1-30" name="classify3" type="radio">
+													<label for="classify3-1-30">摄影与电影
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="168" id="classify3-1-31" name="classify3" type="radio">
+													<label for="classify3-1-31">专业服务
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="169" id="classify3-1-32" name="classify3" type="radio">
+													<label for="classify3-1-32">学生
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="170" id="classify3-1-33" name="classify3" type="radio">
+													<label for="classify3-1-33">婚礼、活动及派对
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="171" id="classify3-1-34" name="classify3" type="radio">
+													<label for="classify3-1-34">写作与新闻传播
+</label>
+												</li>
+						         			
+					         			</ul>
+								   </li>	
+				         			  
+		         			
+		         			 	
+									<li>
+										<p class="subdesign_choose twoTemplate">个人与家庭
+</p>
+											
+									    <ul style="display: none;" class="sub_ul">
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="173" id="classify3-2-1" name="classify3" type="radio">
+													<label for="classify3-2-1">艺术与娱乐
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="174" id="classify3-2-2" name="classify3" type="radio">
+													<label for="classify3-2-2">婴儿
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="175" id="classify3-2-3" name="classify3" type="radio">
+													<label for="classify3-2-3">急救联系卡
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="176" id="classify3-2-4" name="classify3" type="radio">
+													<label for="classify3-2-4">环境
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="177" id="classify3-2-5" name="classify3" type="radio">
+													<label for="classify3-2-5">事件和筹款
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="178" id="classify3-2-6" name="classify3" type="radio">
+													<label for="classify3-2-6">时尚
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="179" id="classify3-2-7" name="classify3" type="radio">
+													<label for="classify3-2-7">烹饪与饮食
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="180" id="classify3-2-8" name="classify3" type="radio">
+													<label for="classify3-2-8">几何和边界
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="181" id="classify3-2-9" name="classify3" type="radio">
+													<label for="classify3-2-9">小孩
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="182" id="classify3-2-10" name="classify3" type="radio">
+													<label for="classify3-2-10">男性
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="183" id="classify3-2-11" name="classify3" type="radio">
+													<label for="classify3-2-11">妈妈卡片
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="184" id="classify3-2-12" name="classify3" type="radio">
+													<label for="classify3-2-12">感人的
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="185" id="classify3-2-13" name="classify3" type="radio">
+													<label for="classify3-2-13"> 席次牌
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="186" id="classify3-2-14" name="classify3" type="radio">
+													<label for="classify3-2-14">纯色
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="187" id="classify3-2-15" name="classify3" type="radio">
+													<label for="classify3-2-15">纯文本
+</label>
+												</li>
+						         			
+						         				<li class="threeTemplate">
+													<input class="design_radio" value="188" id="classify3-2-16" name="classify3" type="radio">
+													<label for="classify3-2-16">婚宴
+</label>
+												</li>
+						         			
+					         			</ul>
+								   </li>	
+				         			  
+		         			
+	         			</ul>
+	         		
+
+	         	
+					<!-- 判断一级分类下有没有二级分类 -->
+	         		
+						<!-- 一级 -->
+						<div class="design_first">尺寸
+</div>      
+						
+						<!-- 二级  -->
+						<ul style="display: none;" class="design_ul">		
+		         			
+		         			 	
+				         			<li>
+										<input class="design_radio" value="458" name="classify4" id="classify4-1" checked="checked" type="radio">
+										<label for="classify4-1">80mmx50mm
+</label>
+									</li>
+				         			  
+		         			
+		         			 	
+				         			<li>
+										<input class="design_radio" value="456" name="classify4" id="classify4-2" type="radio">
+										<label for="classify4-2">90mmx54mm
+</label>
+									</li>
+				         			  
+		         			
+	         			</ul>
+	         		
+
+	         	
+	           <!-- 保存menuid -->
+	           <input name="productversionid" value="" id="productversionid" type="hidden">
+	           <input name="productstyleid" value="" id="productstyleid" type="hidden">
+	           <input name="producttypeid" value="" id="producttypeid" type="hidden">
+	           <input name="productsizeid" value="" id="productsizeid" type="hidden">
+	           <input name="productcolorid" value="" id="productcolorid" type="hidden">
+	           <input name="productid" value="" id="productid" type="hidden">
+	           
+		      	<!-- 顔色選擇 -->
+		      	<div class="design_color" id="choose_color">颜色</div>
+				<ul style="display: none;" class="color_list">
+						
+							<li class="" hex="051821"><a style="background:#051821;"></a></li>
+						
+							<li class="hover" hex="8cc63e"><a style="background:#8cc63e;"></a></li>
+						
+							<li class="" hex="939597"><a style="background:#939597;"></a></li>
+						
+							<li class="" hex="fff100"><a style="background:#fff100;"></a></li>
+						
+							<li class="" hex="ed1c24"><a style="background:#ed1c24;"></a></li>
+						
+							<li class="" hex="ffffff"><a style="background:#ffffff;"></a></li>
+						
+							<li class="" hex="f499c1"><a style="background:#f499c1;"></a></li>
+						
+							<li class="" hex="f5821f"><a style="background:#f5821f;"></a></li>
+						
+							<li class="" hex="7c51a1"><a style="background:#7c51a1;"></a></li>
+						
+							<li class="" hex="0071bb"><a style="background:#0071bb;"></a></li>
+						
+							<li class="" hex="ff8800"><a style="background:#ff8800;"></a></li>
+						 
+				</ul>
+				
+		           <!-- 判斷是添加主模板還是子模板 -->
+		       	  <div class="design_ale" style="cursor: default;">已选择：<span id="show">&nbsp;横卡
+&nbsp;80mmx50mm
+</span></div>
+		        
+		        
+	           	模板价格:<input name="templatePrice" id="templatePrice" value="11.0">
+	           <input name="templateid" value="2278" id="templateid" type="hidden">
+	           <input name="flag" value="0" id="flag" type="hidden">
+	           <input name="menuid" value="81" id="menuid" type="hidden">
+	           <!-- 判断是添加主模板还是字模板 -->
+	           
+	           <div class="design_btn"><input value="下一页" type="submit">&nbsp;&nbsp;<input value="清空" id="reset" type="reset"></div>
+        </div>
+        </div>
+       </form>
+  
+
+</body>
+</html>

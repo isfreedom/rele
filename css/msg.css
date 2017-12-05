@@ -1,0 +1,436 @@
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+a{text-decoration:none;}
+.txt-rt{text-align:right;}
+.txt-lt{text-align:left;}
+.txt-center{text-align:center;}
+.float-rt{float:right;}
+.float-lt{float:left;}
+.clear{clear:both;}
+.pos-relative{position:relative;}
+.pos-absolute{position:absolute;}
+.vertical-base{	vertical-align:baseline;}
+.vertical-top{	vertical-align:top;}
+nav.vertical ul li{	display:block;}
+nav.horizontal ul li{	display: inline-block;}
+img{max-width:100%;}
+/*end reset*/
+
+/****-----start-body----****/
+body{
+	background:url(../img/msg/smbg.png);
+  font-family: 'Lora', serif;
+
+}
+body a,form li,.submit input[type="submit"]{
+	transition: 0.1s all;
+	-webkit-transition: 0.1s all;
+	-moz-transition: 0.1s all;
+	-o-transition: 0.1s all;
+}
+body h1 {
+  color: #000;
+  text-align: center;
+  padding-top:2em;
+  font-size:2.9em;
+ font-family: 'Raleway', sans-serif;
+}
+.login-01,.copyRight{
+  width:60%;
+  margin:5% auto 3%;
+}
+form {
+   padding: 0% 1%;
+}
+form li.first,li.second{
+  border:none;
+  list-style:none;
+  margin-bottom:10px;
+  width:100%;
+}
+.icon,.icon2  {
+  height:55px;
+  width:55px;
+  display: block;
+  float: left;
+  border-top-left-radius: 0.3em;
+  -o-border-top-left-radius: 0.3em;
+  -moz-border-top-left-radius: 0.3em;
+  -webkit-border-top-left-radius: 0.3em;
+  border-border-bottom-left-radius: 0.3em;
+  -o-border-bottom-left-radius: 0.3em;
+  -moz-border-bottom-left-radius: 0.3em;
+  -webkit-border-bottom-left-radius: 0.3em;
+}
+.user {
+    background: url(../img/msg/pep.png) center center no-repeat #f79d29;
+}
+.email{
+  background:url(../img/msg/email.png) center center no-repeat #f79d29;
+}
+.msg{
+  background: url(../img/msg/lev.png) center center no-repeat #f79d29;
+}
+li.first:hover .user{
+     background: url(../img/msg/pep2.png) no-repeat 14px 15px #fff;
+}
+li.first:hover .email{
+  background:url(../img/msg/email2.png) center center no-repeat #fff;
+}
+li.second:hover .msg {
+  background: url(../img/msg/lev2.png) center center no-repeat #fff;
+}
+/*-----*/
+input[type="text"],form textarea {
+  width: 82%;
+  padding: 1.13em 1em 1.13em 1em;
+  color: #858282;
+  font-size: 16px;
+  outline: none;
+  background: #fff;
+  font-weight: 500;
+  border: none;
+  font-family: 'Lora', serif;
+  border-top-right-radius: 0.3em;
+  -o-border-top-right-radius: 0.3em;
+  -moz-border-top-right-radius: 0.3em;
+  -webkit-border-top-right-radius: 0.3em;
+  border-border-bottom-right-radius: 0.3em;
+  -o-border-bottom-right-radius: 0.3em;
+  -moz-border-bottom-right-radius: 0.3em;
+  -webkit-border-bottom-right-radius: 0.3em;
+  }
+  .submit{
+
+  }
+form textarea {
+  resize: none;
+  height: 140px;
+}
+.subWrap{width: 100%;text-align: center;margin-top: 20px;}
+.subWrap input[type="submit"]{
+  font-size: 17px;
+  font-weight: 300;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  width: 75px;
+  height: 75px;
+  border: 2px solid #fff;
+  background: #F79D29;
+  border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  margin-right:2.85em;
+  background: url(../img/msg/send.png) center center no-repeat;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.login-01 input[type="submit"]:hover{
+  background: url(../img/msg/send2.png) center center no-repeat #f79d29;
+  box-shadow: 0 0 20px #fff;
+}
+li.lost {
+  margin-bottom: 21px;
+}
+.msgTxt1{position: relative;border-bottom: 1px solid #ccc;padding: 10px 0px;margin: 10px 0px;}
+.msg-list{border: 1px solid #f79d29;width: 92%;margin: 40px 0px;padding: 10px 20px;box-sizing:border-box;background: #fff;}
+.msg-list p{line-height: 30px;}
+.msgSayBack{padding: 5px 10px;background: #f79d29;border-radius: 3px;color: #fff;cursor: pointer;}
+.sayBackWrap{margin: 10px auto;}
+.msgTime{font-weight: bold;}
+.msg-list li:last-child{
+  border-bottom: none;
+}
+/*---------------*/
+.copy-right {
+  text-align: center;
+  margin: 2em 0;
+}
+.copy-right p {
+	color: #fff;
+	font-size: 1em;
+	font-weight:400;
+}
+.copy-right p a {
+	color:#fff;
+}
+.copy-right p a:hover {
+	text-decoration: underline;
+}
+/*-----自适应------*/
+@media (max-width:1440px){
+  .login-01 input[type="submit"]{
+  margin-right:1.85em;
+  }
+	
+}
+@media (max-width:1366px){
+  .login-01 input[type="submit"]{
+  margin-right: 0.6em;
+  }
+  	
+}
+@media (max-width:1280px){
+   .login-01 {
+    width: 40%;
+    margin:5% auto 5%;
+  }
+  body h1 {
+  font-size: 2.7em;
+}
+.msg-list{width: 94%;}
+}
+@media (max-width:1024px){
+  .login-01 {
+  width: 45%;
+}
+ body h1 {
+  font-size: 2.5em;
+}
+.msg-list{width: 99%;}
+}
+@media (max-width:874px){
+.msg-list{width: 85%;}
+}
+@media (max-width:768px){
+  .login-01 {
+  width: 63%;
+}
+ body h1 {
+  font-size: 2.3em;
+}
+.msg-list{width: 95%;}
+}
+@media (max-width:640px){
+  .login-01 {
+  width: 73%;
+  }
+  body h1 {
+  font-size: 2.1em;
+}
+.login-01 {
+  width: 86%;
+}
+}
+@media (max-width:480px){
+   .login-01 {
+    width: 85%;
+  }
+  .copy-right p {
+    font-size: 0.9em;
+  }
+  .msg-list{width: 86%;}
+   input[type="text"], form textarea {
+  width: 77%;
+  padding: 1em 1em 1em 1em;
+  font-size: 15px;
+  }
+  .icon, .icon2 {
+  height: 48px;
+  width: 48px;
+  }
+  .user {
+    background: url(../img/msg/pep.png) center center no-repeat #f79d29;
+      background-size: 45%;
+}
+.email{
+  background:url(../img/msg/email.png) center center no-repeat #f79d29;
+    background-size: 45%;
+}
+.msg{
+  background: url(../img/msg/lev.png) center center no-repeat #f79d29;
+    background-size: 45%;
+}
+li.first:hover .user{
+     background: url(../img/msg/pep2.png) center center no-repeat #fff;
+      background-size: 45%;
+}
+li.first:hover .email{
+  background:url(../img/msg/email.png) center center no-repeat #fff;
+   background-size: 45%;
+}
+li.second:hover .msg {
+  background: url(../img/msg/lev.png) center center no-repeat #fff;
+   background-size: 45%;
+}
+body h1 {
+  font-size:2em;
+  padding-top: 1em;
+}
+form li.first, li.second {
+  margin-bottom: 5px;
+  }
+
+}
+@media (max-width:320px){
+  input[type="text"], form textarea {
+ width: 71%;
+  padding: 1em 1em 1em 0.8em;
+  font-size: 14px;
+  }
+  .login-01 {
+    width:96%;
+  }
+  .msg-list{width: 96%;}
+  .icon, .icon2 {
+  height: 45px;
+  width: 45px;
+  }
+  .user {
+    background: url(../img/msg/pep.png) center center no-repeat #f79d29;
+     background-size: 40%;
+}
+.email{
+  background:url(../img/msg/email.png) center center no-repeat #f79d29;
+   background-size: 40%;
+}
+.msg{
+  background: url(../img/msg/lev.png) center center no-repeat #f79d29;
+  background-size: 40%;
+}
+li.first:hover .user{
+    background: url(../img/msg/pep2.png) center center no-repeat #fff;
+    background-size: 40%;
+}
+li.first:hover .email{
+  background:url(../img/msg/email2.png) center center no-repeat #fff;
+  background-size: 40%;
+}
+li.second:hover .msg {
+  background:url(../img/msg/lev2.png) center center no-repeat #fff;
+  background-size: 40%;
+}
+.copy-right p {
+  line-height: 1.6em;
+}
+.login-01 input[type="submit"] {
+  font-size: 17px;
+ width: 55px !important;
+ height: 55px;
+  width: 36%;
+  margin-right: 0.7em;
+}
+body h1 {
+  font-size:1.6em;
+}
+.msg-list{ padding: 10px;}
+}
+/*----------footer----------*/
+
+.meLink li{float: left;}
+.meLink li{margin: 20px auto 20px 20px;float: left;}
+.meLink li:nth-child(1){margin-left: 30%;}
+.msgFooter{text-align: center;}
+.meLink{clear: both;}
+.meLink a{display: block;cursor: pointer;width: 45px;height: 45px;border: 1px solid #000;border-radius: 50%;-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-ms-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;}
+.meLink .weibo{background: url(../img/me/weibo.png) center center no-repeat;}
+.meLink .weixin{background: url(../img/me/weixin.png) center center no-repeat;}
+.meLink .douban{background: url(../img/me/douban.png) center center no-repeat;}
+.meLink .zhihu{background: url(../img/me/zhihu.png) center center no-repeat;}
+.meLink .github{background: url(../img/me/github.png) center center no-repeat;}
+.meLink a:hover{-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+transform: rotate(360deg);
+box-shadow: 0 0 8px;
+}
+/**************弹出微信二维码***************/
+.WeChatWrap{position: fixed;width: 100%;height: 100%;background: aliceblue;z-index: 1000;top: 0px;left: 0px;display: none;}
+.addWeChat{position: fixed;width: 300px;height: 400px;top: 50%;left: 50%;-webkit-transform: translateX(-50%) translateY(-50%);
+-moz-transform: translateX(-50%) translateY(-50%);
+-ms-transform: translateX(-50%) translateY(-50%);
+-o-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);background: #fff;border: 1px solid #ccc;padding: 20px;z-index: 1005;display: none;}
+.ChatHead{background: url(../img/me/tian.png) no-repeat;width: 100%;height: 50px;line-height: 50px;margin-top: 10px;}
+.myName{margin-left: 60px;}
+.headePic{background: url(../img/me/nv.png) no-repeat;width: 20px;height: 18px;display: inline-block;margin-left: 10px;}
+.ChatBottom{text-align: center;margin-top: 10px;}
+.ChatBottom img{width: 200px;height: 200px;}
+.ChatBottom p{line-height: 26px;}
+/*--------主菜单-------*/
+.menuToggle{position: fixed;right: 0;top: 30px;width: 90px;cursor: pointer;z-index: 100000}
+.menuToggle a{border: 1px solid #000;width: 90px;margin-top: 10px;display:block;-webkit-transition: all .3s;-moz-transition: all .3s;-ms-transition: all .3s;-o-transition: all .3s;transition: all .3s;float: right;}
+.menuToggle .borderColor{border: 1px solid #fff;}
+.menuToggle:hover .m1{width: 50px;}
+.menuToggle:hover .m2{width: 70px;}
+.menuToggle:hover .m3{width: 40px;}
+/*-----------弹出遮罩--------------*/
+#mask{width: 100%;height: 100%;position: fixed;top: 0px;left: 0px;background: #000;display: none;z-index: 100}
+.nav{width: 100%;text-align: center;}
+.MenuTitle{margin-top: 90px;}
+.MenuTitle li a{cursor: pointer;font-size: 34px;height: 45px;line-height: 45px;color: #fff;margin: 10px 0px;position: relative;display: inline-block;transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;}
+.MenuTitle a::before{
+  content: '';
+    background-color: rgba(255,255,255,.6);
+    height: 1px;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: -20px;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+.MenuTitle a::after{
+  content: '';
+    background-color: rgba(255,255,255,.6);
+    height: 1px;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: -20px;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+.MenuTitle a:hover{color: rgba(255,255,255,.6);}
+.MenuTitle a:hover::before{width: 100px;left:-120px}
+.MenuTitle a:hover::after{width: 100px;top:22px;right:-120px}
+/*-----------回复---------*/
+.callBack{display: none;}
+.callBackTitle h3{width: 92.8%;text-align: center;border-bottom: 1px solid orange;font-size: 20px;color: orange;height: 50px;line-height: 50px;}
+.backWrap{text-align: center;margin-top: 2em;}
+.backWrap input{
+    border: 1px solid orange;
+    background: #fff;
+    padding: 10px 20px;
+  color: orange;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-right: 2em;
+}
+.backWrap input[type="submit"]{margin-right: 10em;}
+.login-01 .backWrap input:hover{
+  background: orange;
+  color: #fff;
+  cursor: pointer;
+}
+.msgBack{background: #eee;padding: 20px;}

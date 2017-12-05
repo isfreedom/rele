@@ -1,0 +1,121 @@
+.indexBody{overflow-x: hidden;width: 100%;height: 100%;}
+#indexHeader{}
+.indexHeaderTtitle{font-size: 18px;height: 30px;line-height: 30px;text-align: center;padding-top: 40px;}
+.indexImg{width: 1024px;height: 448px;position: relative;margin: 0 auto;top: 40px;text-align: center;}
+.indexImg img{width: 670px;height: 448px;}
+.menuToggle{position: fixed;right: 0;top: 30px;width: 90px;cursor: pointer;z-index: 100000}
+.menuToggle a{border: 1px solid #000;width: 90px;margin-top: 10px;display:block;-webkit-transition: all .3s;-moz-transition: all .3s;-ms-transition: all .3s;-o-transition: all .3s;transition: all .3s;float: right;}
+.menuToggle .borderColor{border: 1px solid #fff;}
+.menuToggle:hover .m1{width: 50px;}
+.menuToggle:hover .m2{width: 70px;}
+.menuToggle:hover .m3{width: 40px;}
+/*-------------footer------------*/
+.copyRight{
+  position: absolute;
+    /*bottom: -50px;*/
+    left: 0px;
+    width: 100%;
+    text-align: center;
+}
+.meLink li{float: left;}
+.meLink li{margin: 20px auto 20px 20px;float: left;}
+.meLink li:nth-child(1){margin-left: 36%;}
+.meLink{clear: both;}
+.meLink a{display: block;cursor: pointer;width: 45px;height: 45px;border: 1px solid #000;border-radius: 50%;-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-ms-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;}
+.meLink .login{background: url(../img/me/login.png) center center no-repeat;}
+.meLink .weibo{background: url(../img/me/weibo.png) center center no-repeat;}
+.meLink .weixin{background: url(../img/me/weixin.png) center center no-repeat;}
+.meLink .douban{background: url(../img/me/douban.png) center center no-repeat;}
+.meLink .zhihu{background: url(../img/me/zhihu.png) center center no-repeat;}
+.meLink .github{background: url(../img/me/github.png) center center no-repeat;}
+.meLink a:hover{-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+transform: rotate(360deg);
+box-shadow: 0 0 8px;
+}
+.menuContain{width: 100%;height: 600px;position: relative;overflow: hidden;margin-top: 150px;;-webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-ms-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;}
+.menuContain li{width: 25%;position: relative;float: left;height: 600px;-webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-ms-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;}
+.menuContain li:nth-child(1)::before{display: block;content: "";width: 100%;height: 100%;background: url(../img/index/2.jpg) no-repeat;position: absolute;top: 0px;left: 0px;}
+.menuContain li:hover:before{-webkit-background-size: cover;
+background-size: cover;background-position: center;}
+.menuContain li:hover span{height: 30px;}
+.menuContain:hover li{width: 16.6%;}
+.menuContain li:hover{width: 50%;}
+.menuContain li:nth-child(1){background: #000;}
+.menuContain li:nth-child(2){background: #ccc;}
+.menuContain li:nth-child(3){background: blue;}
+.menuContain li:nth-child(4){background: orange;}
+.menuTitle{width: 100%;position: absolute;bottom: 0px;text-align: center;}
+.menuTitle h3{font-size: 30px;color: #fff;}
+.menuTitle span{height: 0px;width: 1px;display: inline-block;background: #fff;-webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-ms-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;}
+.indexOtherList{width: 100%;margin: 3% 0 4% 0;}
+.indexOtherList a{ float: left;height: 30px;line-height: 30px;position: relative;color: #000;}
+.indexOtherList b{position: relative;z-index: 2;}
+.indexOtherList a{width: 20%;display: inline-block;text-align: center;border: 1px solid #000;margin-left: 3.3rem;}
+.indexOtherList span{position: absolute;display: inline-block;left: 50%;margin: 0;top: 50%;width: 0;height: 0;-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-ms-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;background: #000;z-index: 1;}
+.indexOtherList a:hover{color: #fff;}
+.indexOtherList a:hover span{width: 100%;height: 30px;margin: -15px -50% 0 -50%;}
+/*-----------弹出遮罩--------------*/
+#mask{width: 100%;height: 100%;position: fixed;top: 0px;left: 0px;background: #000;display: none;z-index: 100}
+.nav{width: 100%;text-align: center;}
+.MenuTitle{margin-top: 90px;}
+.MenuTitle li a{cursor: pointer;font-size: 34px;height: 45px;line-height: 45px;color: #fff;margin: 10px 0px;position: relative;display: inline-block;transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;}
+.MenuTitle a::before{
+	content: '';
+    background-color: rgba(255,255,255,.6);
+    height: 1px;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: -20px;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+.MenuTitle a::after{
+	content: '';
+    background-color: rgba(255,255,255,.6);
+    height: 1px;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: -20px;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+.MenuTitle a:hover{color: rgba(255,255,255,.6);}
+.MenuTitle a:hover::before{width: 100px;left:-120px}
+.MenuTitle a:hover::after{width: 100px;top:22px;right:-120px}

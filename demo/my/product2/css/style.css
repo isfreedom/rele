@@ -1,0 +1,500 @@
+/* header B */
+#header{
+	width: 100%;
+}
+#nav{
+	background: #252c34;
+	width: 100%;
+	height: 54px;
+	/*position: fixed;*/
+}
+.fixednav{
+	width: 100%;
+	height: 54px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999999999999;
+}
+/*#main-nav{
+	width: 100%;
+	height: 54px;
+	position: fixed;
+	top: 0;
+	left: 0;
+}*/
+#nav #logo{
+	width: 50px;
+	height: 40px;
+	margin-left: 60px;
+	padding-top: 8px;
+}
+#nav #logo{
+	float: left;
+}
+#nav #logo img{
+	width: 40px;
+	height: 40px;
+}
+#nav .ul-list li{
+	float: left;
+	height: 54px;
+	line-height: 54px;
+	font-size: 16px;
+	text-align: center;
+	margin-left: 10px;
+}
+#nav .ul-list li#web{
+	width: 78px;
+}
+#nav .ul-list li#ins{
+	width: 96px;
+}
+#nav .ul-list li#ipa{
+	width: 84px;
+}
+#nav .ul-list li#iph{
+	width: 98px;
+}
+#nav .ul-list li#des{
+	width: 82px;
+}
+#nav .ul-list li#ico{
+	width: 54px;
+}
+#nav .ul-list li#dow{
+	width: 54px;
+}
+#nav .ul-list li a{
+	color: #99969e;
+	height: 54px;
+	display: inline-block;
+}
+#nav .ul-list li.active a{
+	color: #fff;
+}
+#nav .ul-list li a:hover{
+	color: #fff;
+}
+#nav .two{
+	height: 54px;
+	line-height: 54px;
+	margin-right: 50px;
+	/*width: 200px;*/
+}
+#nav .two a{
+	width: 48px;
+	height: 20px;
+	color: #99969e;
+	padding: 0 10px;
+	font-size: 18px;
+}
+#nav .two a:hover{
+	color: #fff;
+}
+#nav .login-a{
+	height: 54px;
+	line-height: 54px;
+	margin-right: 40px;
+	font-size: 16px;
+}
+#nav .login-a a{
+	color: #99969e;
+}
+
+#nav .login-a a:hover{
+	color: #fff;
+}
+#nav #search{
+	height: 35px;
+	line-height: 35px;
+	margin-right: 10px;
+	margin-top: 9px;
+	text-align: left;
+	position: relative;
+}
+#nav #search input{
+	outline: none;
+	background: none;
+	cursor: auto;
+	width: 200px;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px solid #999;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0px;
+	padding-left: 5px;
+	display: none;
+}
+#nav #search a{
+	width: 48px;
+	height: 20px;
+	color: #99969e;
+	padding: 0 10px;
+	font-size: 18px;
+	z-index: 2;
+	cursor: text;
+}
+#sub-nav{
+	background: #fff;
+	height: 54px;
+	width: 100%;
+	border: 1px solid #eee;
+	z-index: 98;
+	/*margin-top: 54px;*/
+}
+#sub-nav ul#color{
+	margin-left: 60px;
+}
+#sub-nav ul#color li{
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	float: left;
+	margin-right: 10px;
+	margin-top: 15px;
+}
+#sub-nav ul#color li a{
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	float: left;
+}
+#sub-nav ul#color li#black a{
+	background: #000;
+}
+#sub-nav ul#color li#blue a{
+	background: blue;
+}
+#sub-nav ul#color li#gray a{
+	background: gray;
+}
+#sub-nav ul#color li#brown a{
+	background: brown;
+}
+#sub-nav ul#color li#red a{
+	background: red;
+}
+#sub-nav ul#color li#green a{
+	background: green;
+}
+#sub-nav ul#color li#pink a{
+	background: pink;
+}
+#sub-nav ul#color li#orange a{
+	background: orange;
+}
+#sub-nav ul#color li#white a{
+	background: #fff;
+	border: 1px solid #eee;
+}
+#sub-nav ul#color li#yellow a{
+	background: yellow;
+}
+#sub-nav ul#color li#lot a{
+	background-image: linear-gradient(to right,red,orange,yellow,pink,skyblue);
+
+}
+#sub-nav #filter{
+	width: 54px;
+	height: 54px;
+	line-height: 54px;
+	margin-right: 60px;
+	position: relative;
+	color: #666;
+}
+#sub-nav #filter i{
+	font-size: 20px;
+	position: relative;
+	z-index: 98;
+	/*display: block;*/
+}
+#sub-nav #sub-nav-menu{
+	width: 272px;
+	height: 290px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 97;
+	background: #fff;
+	display: none;
+	padding-top: 54px;
+}
+#sub-nav #sub-nav-menu ul{
+	width: 272px;
+	height: 290px;
+	cursor: pointer;
+}
+#sub-nav #sub-nav-menu ul li{
+	width: 80px;
+	height: 32px;
+	line-height: 32px;
+	float: left;
+	padding-left: 10px;
+}
+#sub-nav #sub-nav-menu ul li a{
+	color: #666;
+}
+#sub-nav #sub-nav-menu ul li a:hover{
+	color: #000;
+}
+/* header E */
+
+/* container B */
+#container{
+	margin-top: 25px;
+	height: 1140px;
+	width: 100%;
+	background: #f8f8f8;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 30px;
+}
+#container #content{
+	width: 1200px;
+	margin: 0 auto;
+
+	
+}
+#content .con-header{
+	width: 1200px;
+	height: 102px;
+}
+#content .con-header h1{
+	width: 1200px;
+	height: 64px;
+	line-height: 64px;
+	text-align: center;
+
+}
+#content .con-header .meta{
+	height: 38px;
+	line-height: 38px;
+	width: 1200px;
+	text-align: center;
+}
+#content .con-header .meta a{
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+	background: #f8f8f8;
+	padding: 0 10px;
+	color: #99969e;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+}
+#content .con-header .meta a:hover{
+	border-color: #aaa;
+	color: #000;
+}
+#content #con-pic{
+	margin-top: 30px;
+}
+#content #con-pic #slider{
+	width: 800px;
+
+}
+#content #con-pic #slider #slider-content{
+	width: 800px;
+	height: 90px;
+	background: #fff;
+	border: 1px solid #eee;
+	padding: 20px;
+	box-sizing:border-box;
+}
+#content #con-pic #slider #slider-pic{
+	margin-top: 20px;
+	border: 1px solid #eee;
+	/*border-left-width: 0;*/
+	box-sizing:border-box;
+	position: relative;
+	text-align: center;
+}
+#content #con-pic #slider #slider-pic .slider-list{
+	width: 600px;
+	height: 610px;
+	margin-right: 100px;
+	/*padding-right: 100px;*/
+	/*position: relative;*/
+}
+#content #con-pic #slider #slider-pic div{
+	position: absolute;
+	top: 300px;
+	font-size: 50px;
+	z-index: 51px;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	opacity: 10;
+	filter:alpha(opacity:0);
+	/*background: red;*/
+	cursor: pointer;
+}
+#content #con-pic #slider #slider-pic div.btn-right{
+	right: 0;
+	
+}
+#content #con-pic #slider #slider-pic div.btn-left{
+	left: 0px;
+}
+#content #con-pic #slider #slider-pic a.mask-left{
+	position: absolute;
+	top: 0;
+	display: block;
+	z-index: 50px;
+	left: 0;
+	display: block;
+	height: 610px;
+	width: 100px;
+	background: #fff;
+	
+
+}
+#content #con-pic #slider #slider-pic a.mask-right{
+	position: absolute;
+	top: 0;
+	display: block;
+	z-index: 50px;
+	right: 0;
+	display: block;
+	height: 610px;
+	width: 100px;
+	background: #fff;
+}
+#content #con-pic #slider #slider-pic li{
+	float: left;
+	height: 610px;
+	width: 600px;
+	position: absolute;
+	left: 50px;
+	top: 0;
+	/*z-index: 1;*/
+}
+
+#content #con-pic #slider #slider-pic li img{
+	height: 610px;
+	width: 600px;
+	position: absolute;
+	left: 50px;
+	top: 0;
+	display: block;
+	/*border-left: 1px solid #ccc;*/
+}
+#content #con-pic #slider #slider-pic img#side{
+
+}
+#content #con-pic #sidebar{
+	width: 400px;
+	/*padding-left: 20px;*/
+	box-sizing:border-box;
+}
+#content #con-pic #sidebar #cup{
+	width: 380px;
+	height: 130px;
+	background: #fff;
+	border: 1px solid #eee;
+	margin-left: 20px;
+}
+#content #con-pic #sidebar #cup .cup-wrap{
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+#content #con-pic #sidebar #cup a{
+	display: inline-block;
+	text-align: left;
+	color: #434343;
+}
+#content #con-pic #sidebar #cup a.cup-img img{
+	width: 130px;
+	height: 110px;
+	vertical-align: top;
+
+}
+#content #con-pic #sidebar .pic-list{
+	margin-top: 20px;
+}
+#content #con-pic #sidebar .pic-list li{
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+#content #con-pic #sidebar .pic-list li a img {
+
+	transition: all 0.3s ;
+}
+#content #con-pic #sidebar .pic-list li a:hover img{
+	transform: scale(1.3, 1.3);
+}
+/* container E */
+/* footer B */
+#footer{
+	background: #fff;
+	text-align: center;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#footer a {
+	color: #434343;
+	margin-right: 10px;
+}
+#footer a:hover{
+	color: #06a3f8;
+}
+/* footer E */
+/* 登录的代码 */
+#wrap{
+	background: #000;
+	opacity: 0.75;
+	filter:alpha(opacity=75);
+	position: absolute;
+	z-index: 100;
+	/*width: 100%;
+	height: 100%;*/
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+/* 分享 */
+#share{
+	position: fixed;
+	right: 0;
+	top: 150px;
+	z-index: 3px;
+}
+#share ul{
+	width: 54px;
+	height: 114px;
+	background: red;
+}
+#share ul li{
+	width: 54px;
+	height: 57px;
+	text-align: center;
+	line-height: 57px;
+	color: #fff;
+}
+#share ul li a{
+	color: #fff;
+	width: 54px;
+	height: 57px;
+	display: inline-block;
+}
+#share ul li#weibo{
+	background: red;
+}
+#share ul li#weibo a:hover{
+	background: #c1222c;
+}
+#share ul li#twitter a:hover{
+	background: #292f33;
+}
+#share ul li#twitter{
+	background: #55acee;
+}
+#share ul i{
+	font-size: 24px;
+}

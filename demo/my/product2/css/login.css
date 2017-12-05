@@ -1,0 +1,160 @@
+body,ul,input,p,label{margin: 0;padding: 0;}
+		input{border: 0;}
+		ul{list-style: none;}
+		a{text-decoration: none;color: #5e5e5e;}
+		#login{
+			position: fixed;
+			z-index: 1000;
+			/*left: 50%;
+			top: 50%;
+			margin-left: -335px;
+			margin-top: -190px;*/
+			z-index: 199;
+		}
+		.loginCon{
+			width: 670px;
+			height: 380px;
+			position: relative;
+			background: #edf0f2;
+		}
+		.loginCon #top{
+			height: 60px;
+			width: 100%;
+			/*background: #be3948;*/
+			background: #252c34;
+			border-bottom: 1px solid #252c34;
+			position: relative;
+		}
+		.loginCon #top a{
+			height: 60px;
+			line-height: 60px;
+			color: #fff;
+			margin-left: 30px;
+			font-size: 18px;
+			float: left;
+		}
+		.loginCon #bottom{
+			height: 320px;
+			width: 100%;
+			padding: 40px 40px 0 40px;
+			box-sizing:border-box;
+		}
+		.loginCon #bottom .left{
+			float: left;
+			width: 320px;
+			height: 240px;
+			border-right: 1px solid #ccc;
+			padding-right: 30px;
+		}
+		#bottom .left .typeList{
+			overflow: hidden;
+		}
+		#bottom .left .typeList li label{
+			height: 38px;
+			line-height: 38px;
+			font-size: 14px;
+			float: left;
+			margin-top: 10px;
+		}
+		#bottom .left .typeList li input{
+			width: 240px;
+			height: 38px;
+			border: 1px solid #d0d6d9;
+			color: #ccc;
+			float: left;
+			text-indent: 5px;
+			margin-top: 10px;
+		}
+		#bottom .left .typeList li input.text{
+			margin-left: 20px;
+		}
+		#bottom .left .clear{
+			height: 74px;
+			line-height: 74px;
+		}
+		#bottom .left .clear:after{
+			content: '';
+			display: block;
+			height: 0;
+			visibility: hidden;
+			clear: both;
+		}
+		#bottom .left .oneself{
+			float: left;
+		}
+		#bottom .left .forget{
+			float: right;
+		}
+		#bottom .left .register{
+			width: 140px;
+			height: 40px;
+			background: #d0d6d9;
+			display: inline-block;
+			text-align: center;
+			line-height: 40px;
+		}
+		#bottom .left .ha a:hover{
+			background: #aaa;
+		}
+		#bottom .left .landing{
+			width: 160px;
+			height: 40px;
+			line-height: 40px;
+			display: inline-block;
+			background: #d0d6d9;
+			color: #fff;
+			text-align: center;
+			margin-left: 20px;
+			color: #5e5e5e;
+		}
+		.loginCon #bottom .right{
+			float: right;
+			width: 239px;
+			height: 239px;
+			/*background: red;*/
+			padding-left: 39px;
+			padding-top: 22px;
+			box-sizing:border-box;
+			font-size: 12px;
+		}
+		.loginCon #bottom .right p{
+			height: 50px;
+			line-height: 50px;
+			padding-left: 37px;
+			color: #4d5559;
+		}
+		.loginCon #bottom .right a{
+			display: block;
+			font-size: 14px;
+			color:#aaa;
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+		}
+		.loginCon #bottom .right a:hover{
+			color: #252c34;
+		}
+		#bottom .right .QQ{
+			background: #fff;
+		}
+		#bottom .right .sina{
+			background: #fff;
+			margin-top: 10px;
+		}
+		#close{
+			width: 14px;
+			height: 14px;
+			line-height: 14px;
+			color: #fff;
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			cursor: pointer;
+			text-align: center;
+			font-family: '黑体';
+			font-size: 16px;
+		}
+		#close i{
+			font-size: 24px;
+		}

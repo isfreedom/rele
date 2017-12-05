@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的交易记录</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+<div>
+    <div id="header">
+        <div class="wrap clearfix">
+            <div class="clearfix">
+                <ul class="header_nav fr">
+                    <li>您好！欢迎<span class="admin">demo</span>登入</li>
+                    <li>
+                        <img src="img/quit.png" alt="">
+                        <a href="#" class="quit">退出</a>
+                    </li>
+                    <li class="my" id="me">
+                        <img class="img1" src="img/me.png" alt="">
+                        <a href="#" id="my" class="op">我的账户</a>
+                        <img class="img2" src="img/down.png" alt="">
+                        <ul class="sub_ul" id="ul">
+                            <li><a href="myAccount.html">我的账户</a></li>
+                            <li><a href="#">我的优惠</a></li>
+                            <li><a href="favorites.html">我的收藏</a></li>
+                            <li><a href="#">我的交易记录</a></li>
+                        </ul>
+                    </li>
+                    <li class="help" id="helpLi">
+                        <img src="img/help.png" alt="">
+                        <a href="#" id="help">帮助中心</a>
+                        <img src="img/down.png" alt="">
+                        <ul class="sub_help">
+                            <li><a href="#">分店资料</a></li>
+                            <li><a href="#">订购须知</a></li>
+                            <li><a href="#">落单流程</a></li>
+                            <li><a href="#">提供建议</a></li>
+                            <li><a href="#">图文教程</a></li>
+                            <li><a href="#">视频教程</a></li>
+                            <li><a href="#">常见问题</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="img/shopping.png" alt="">
+                        <a href="shopCar.html" class="shop">购物车</a>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="logo fl"><img src="img/logo.jpg" alt=""></h3>
+            <div class="header_img fr">
+                <img src="img/1.jpg" alt="">
+                <img src="img/2.jpg" alt="">
+                <img src="img/3.jpg" alt="">
+                <img src="img/4.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="nav">
+    <div class="wrap clearfix">
+        <ul class="nav_ul">
+            <li><a href="index.html">首页</a></li>
+            <li class="order"><a href="#" class="down">订单管理</a>
+                <ul class="sub_order">
+                    <li><a href="#">我要落单</a></li>
+                    <li><a href="MyOrder.html">我的订单</a></li>
+                    <li><a href="#">我的购物车</a></li>
+                    <li><a href="#">线上确认稿件</a></li>
+                    <li><a href="#">问题稿件</a></li>
+                </ul>
+            </li>
+            <li class="price"><a href="#" class="down">报价管理</a>
+                <ul class="price_ul">
+                    <li><a href="#">我要落单</a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">我的购物车</a></li>
+                </ul>
+            </li>
+            <li class="trade-manege"><a href="#" class="down">交易管理</a>
+                <ul class="trade_ul">
+                    <li><a href="trade.html">我的交易记录</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="nav_r">
+            <span>我要落单</span>
+            <span>我要报价</span>
+            <span>立即付款</span>
+        </div>
+        <div class="nav_side">
+            <span>高速上传软件</span>
+            <a href="#">按此下载</a>
+        </div>
+    </div>
+</div>
+<div class="wrap">
+    <div id="content">
+        <div class="clearfix my_trade my_order">
+            <h4 class="fl">我的交易记录</h4>
+            <div class="fr">
+                <span>订单编号：</span>
+                <input type="text">
+                <span>交易日期由：由</span>
+                <input type="text">
+                <span>至</span>
+                <input type="text">
+                <a href="#">GO>></a>
+            </div>
+        </div>
+        <div class="table-title clearfix">
+            <p class="record title-active">我的交易记录</p>
+            <p class="notRecord">我的未付账单记录</p>
+        </div>
+        <div class="table orderTable">
+            <form>
+                <table border="0" cellpadding="0" cellspacing="0" class="tradeTable">
+                    <tr>
+                        <th>序号</th>
+                        <th>订单编号</th>
+                        <th>总金额</th>
+                        <th>尚欠金额</th>
+                        <th>已付金额</th>
+                        <th>最后支付日期</th>
+                        <th>详情</th>
+                        <th class="checkedAll">全选</th>
+                    </tr>
+                    <tr>
+                        <td><span>1</span></td>
+                        <td><span class="table_num">575477</span></td>
+                        <td class="trade-money">86.00</td>
+                        <td>0</td>
+                        <td><span>Q706836</span></td>
+                        <td>2014/12/12 23:53</td>
+                        <td>详情</td>
+                        <td><span class="check_span"><input type="checkbox" class="regular-check"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span>2</span></td>
+                        <td><span class="table_num">745774</span></td>
+                        <td class="trade-money">86.00</td>
+                        <td>0</td>
+                        <td><span>Q706836</span></td>
+                        <td>2014/12/12 23:53</td>
+                        <td>详情</td>
+                        <td><span class="check_span"><input type="checkbox" class="regular-check"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span>3</span></td>
+                        <td><span class="table_num">6347547</span></td>
+                        <td class="trade-money">86.00</td>
+                        <td>0</td>
+                        <td><span>Q706836</span></td>
+                        <td>2014/12/12 23:53</td>
+                        <td>详情</td>
+                        <td><span class="check_span"><input type="checkbox" class="regular-check"></span></td>
+                    </tr>
+                </table>
+            </form>
+            <form>
+                <table border="0" cellpadding="0" cellspacing="0" class="notTable">
+                    <tr>
+                        <th>序号</th>
+                        <th>订单编号</th>
+                        <th>总金额</th>
+                        <th>尚欠金额</th>
+                        <th>已付金额</th>
+                        <th>最后支付日期</th>
+                        <th>详情</th>
+                        <th class="checkedAll">全选</th>
+                    </tr>
+                    <tr>
+                        <td><span>1</span></td>
+                        <td><span class="table_num">Q575477</span></td>
+                        <td class="trade-money">86.00</td>
+                        <td>100</td>
+                        <td><span>Q706836</span></td>
+                        <td>2014/12/12 23:53</td>
+                        <td>详情</td>
+                        <td><span class="check_span"><input type="checkbox" class="regular-check"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span>2</span></td>
+                        <td><span class="table_num">Q745774</span></td>
+                        <td class="trade-money">86.00</td>
+                        <td>100</td>
+                        <td><span>Q706836</span></td>
+                        <td>2014/12/12 23:53</td>
+                        <td>详情</td>
+                        <td><span class="check_span"><input type="checkbox" class="regular-check"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span>3</span></td>
+                        <td><span class="table_num">Q6347547</span></td>
+                        <td class="trade-money">86.00</td>
+                        <td>100</td>
+                        <td><span>Q706836</span></td>
+                        <td>2014/12/12 23:53</td>
+                        <td>详情</td>
+                        <td><span class="check_span"><input type="checkbox" class="regular-check"></span></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="total clearfix">
+            <ul class="fr">
+                <li><span class="should">应付总金额：</span><span class="trade-money">432425 HK$</span></li>
+                <li><span class="should">总付款金额：</span><span class="trade-money">432425 HK$</span></li>
+                <li><span class="should">总欠款额：</span><span class="trade-money">432425 HK$</span></li>
+            </ul>
+        </div>
+        <div class="page">
+            <ul class="fr">
+                <li><span>第1页</span></li>
+                <li><span>共13页</span></li>
+                <li>每页12条</li>
+                <li>共152条</li>
+                <li><img class="fast" src="img/left1.png"><img src="img/left-2.png"><input type="text" value="第1页"><img
+                        src="img/right1.png"><img class="fast" src="img/right2.png"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- <include file="footer.html" /> -->
+<!-- <iframe src="footer.html" frameborder="0" width="100%" height="100%"></iframe> -->
+<div id="footer">
+    <div class="img_list fl">
+        <img src="img/b6.jpg" alt="">
+        <img src="img/b7.jpg" alt="">
+        <img src="img/b8.jpg" alt="">
+        <img src="img/b9.jpg" alt="">
+        <img src="img/VISA.png" alt="">
+        <img src="img/b2.png" alt="">
+        <img src="img/b1.png" alt="">
+        <img src="img/b5.jpg" alt="">
+        <img src="img/cn.jpg" alt="">
+    </div>
+    <div class="footer_list fr">
+        <ul>
+            <li class="copyright"><span>Copyright© xxx All right reseved.</span></li>
+            <li class="notice"><a href="#">公告</a></li>
+            <li class="service"><a href="#">在线客服</a><img src="img/kefu.png" alt=""></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

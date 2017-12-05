@@ -1,0 +1,39 @@
+/* css初始化 B */
+html,body,ul,li,p,h1,h2,h3,img,input{
+	margin:0;
+	padding:0
+}
+input,img{
+	border: 0;
+}
+ul{
+	list-style:none;
+}
+body{
+	color: #434343;
+	background-color: #f8f8f8;
+	font: 14px/1.5 'Cuprum',sans-serif,Tahoma,Verdana,Helvetica;
+}
+.clearfix:after{
+	content:".";
+	display:block;
+	height:0;
+	line-height: 0;
+	visibility:hidden;
+	clear:both;
+}
+.clearfix{
+	zoom:1
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+a{
+	text-decoration:none
+}
+
+
+/* css初始化 E */

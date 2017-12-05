@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/jquery.selectlist.js"></script>
+	<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+	<script>
+		//全选、全反选
+        function doSelectAll() {
+            $('input[type=checkbox]').prop("checked", $("#checkbox-0").is(":checked"));
+        }
+	</script>
+</head>
+<body>
+<div>
+    <div id="header">
+        <div class="wrap clearfix">
+            <div class="clearfix">
+                <ul class="header_nav fr">
+                    <li>您好！欢迎<span class="admin">demo</span>登入</li>
+                    <li>
+                        <img src="img/quit.png" alt="">
+                        <a href="#" class="quit">退出</a>
+                    </li>
+                    <li class="my" id="me">
+                        <img class="img1" src="img/me.png" alt="">
+                        <a href="#" id="my" class="op">我的账户</a>
+                        <img class="img2" src="img/down.png" alt="">
+                        <ul class="sub_ul" id="ul">
+                            <li><a href="myAccount.html">我的账户</a></li>
+                            <li><a href="#">我的优惠</a></li>
+                            <li><a href="favorites.html">我的收藏</a></li>
+                            <li><a href="#">我的交易记录</a></li>
+                        </ul>
+                    </li>
+                    <li class="help" id="helpLi">
+                        <img src="img/help.png" alt="">
+                        <a href="#" id="help">帮助中心</a>
+                        <img src="img/down.png" alt="">
+                        <ul class="sub_help">
+                            <li><a href="#">分店资料</a></li>
+                            <li><a href="#">订购须知</a></li>
+                            <li><a href="#">落单流程</a></li>
+                            <li><a href="#">提供建议</a></li>
+                            <li><a href="#">图文教程</a></li>
+                            <li><a href="#">视频教程</a></li>
+                            <li><a href="#">常见问题</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="img/shopping.png" alt="">
+                        <a href="shopCar.html" class="shop">购物车</a>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="logo fl"><img src="img/logo.jpg" alt=""></h3>
+            <div class="header_img fr">
+                <img src="img/1.jpg" alt="">
+                <img src="img/2.jpg" alt="">
+                <img src="img/3.jpg" alt="">
+                <img src="img/4.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="nav">
+    <div class="wrap clearfix">
+        <ul class="nav_ul">
+            <li><a href="index.html">首页</a></li>
+            <li class="order"><a href="#" class="down">订单管理</a>
+                <ul class="sub_order">
+                    <li><a href="#">我要落单</a></li>
+                    <li><a href="MyOrder.html">我的订单</a></li>
+                    <li><a href="#">我的购物车</a></li>
+                    <li><a href="#">线上确认稿件</a></li>
+                    <li><a href="#">问题稿件</a></li>
+                </ul>
+            </li>
+            <li class="price"><a href="#" class="down">报价管理</a>
+                <ul class="price_ul">
+                    <li><a href="#">我要落单</a></li>
+                    <li><a href="MyOrder.html">我的订单</a></li>
+                    <li><a href="#">我的购物车</a></li>
+                </ul>
+            </li>
+            <li class="trade-manege"><a href="#" class="down">交易管理</a>
+                <ul class="trade_ul">
+                    <li><a href="trade.html">我的交易记录</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="nav_r">
+            <span>我要落单</span>
+            <span>我要报价</span>
+            <span>立即付款</span>
+        </div>
+        <div class="nav_side">
+            <span>高速上传软件</span>
+            <a href="file/EOIE10-WindowsXP-x86.exe">按此下载</a>
+        </div>
+    </div>
+</div>
+<div class="wrap Wcontainer">
+    <div id="content">
+        <div>
+            <div class="my_order"><h4 class="shopCarTitle">购物车</h4></div>
+            <div class="right_main clearfix">
+            	 <div class="cart_top">
+	                <span><input type="checkbox" id="checkbox-0" onclick="doSelectAll()" /><label for="checkbox-0">✔</label>全选 </span>
+	                <span class="sec">商品信息</span>
+	                <span class="third">删除</span>
+             	</div>
+             	<div class="cart_item clearfix">
+                 <ul>
+                     <li class="thingList">
+                         <div class="cart_design">
+                             <span><input type="checkbox" id="checkbox-1" /><label for="checkbox-1">✔</label></span>
+                             <p>2016-11-21</p>
+                             <i><img src="img/order/temp1.jpg"/></i>
+                             <!-- <b><a href="design_card.html">进入您的设计</a></b> -->
+                         </div>
+                         <div class="cart_info clearfix">
+                             <h3>卡片</h3>
+                             <div class="choose clearfix">
+                                 <span>数量</span>
+                                 <form action="#" class="info">
+                                    <select id="qty1" name="choose" class="select">
+                                      <option value="0">100</option>
+                                      <option value="1">200</option>
+                                      <option value="2">500</option>
+                                      <option value="3">1000</option>
+                                      <option value="4">2000</option>
+                                      <option value="5">5000</option>
+                                      <option value="6">10000</option>
+                                    </select>
+                                </form>
+                                <span>优惠卷</span>
+                                 <form action="#" class="info coupon">
+                                    <select id="paper1" name="choose" class="select">
+                                      <option value="0">优惠卷01</option>
+                                      <option value="1">优惠卷02</option>
+                                      <option value="2">优惠卷03</option>
+                                      <option value="3">优惠卷04</option>
+                                    </select>
+                                </form>
+                             </div>
+                             <table width="100%" border="0" class="price clearfix">
+                                <tr>
+                                  <td>基础价格：</td>
+                                  <td><b>$ 20.00</b></td>
+                                </tr>
+                                <tr>
+                                  <td>后加工价格：</td>
+                                  <td><b>$ 5.00</b></td>
+                                </tr>
+                                <tr>
+                                  <td>优惠价格：</td>
+                                  <td><b class="blue2">-$ 2.50</b></td>
+                                </tr>
+                                <tr>
+                                  <td class="bn">总价：</td>
+                                  <td class="bn"><b class="f18">$ 22.50</b></td>
+                                </tr>
+                              </table>
+                         </div>
+                         <div class="w80"><a class="del"></a></div>
+                     </li>
+                     <li>
+                         <div class="cart_design">
+                             <span><input type="checkbox" id="checkbox-2" /><label for="checkbox-2">✔</label></span>
+                             <p>2017-1-21</p>
+                             <i><img src="img/order/temp2.jpg"/></i>
+                             <!-- <b><a href="design_card.html">进入您的设计</a></b> -->
+                         </div>
+                         <div class="cart_info">
+                             <h3>卡片</h3>
+                             <div class="choose">
+                                 <span>数量</span>
+                                 <form action="#" class="info">
+                                    <select id="qty2" name="choose" class="select">
+                                      <option value="0">100</option>
+                                      <option value="1">200</option>
+                                      <option value="2">500</option>
+                                      <option value="3">1000</option>
+                                      <option value="4">2000</option>
+                                      <option value="5">5000</option>
+                                      <option value="6">10000</option>
+                                    </select>
+                                </form>
+                                <span>优惠卷</span>
+                                 <form action="#" class="info coupon">
+                                    <select id="paper2" name="choose" class="select">
+                                      <option value="0">优惠卷01</option>
+                                      <option value="1">优惠卷02</option>
+                                      <option value="2">优惠卷03</option>
+                                      <option value="3">优惠卷04</option>
+                                    </select>
+                                </form>
+                             </div>
+                             <table width="100%" border="0" class="price">
+                                <tr>
+                                  <td>基础价格：</td>
+                                  <td><b>$ 20.00</b></td>
+                                </tr>
+                                <tr>
+                                  <td>后加工价格：</td>
+                                  <td><b>$ 5.00</b></td>
+                                </tr>
+                                <tr>
+                                  <td>优惠价格：</td>
+                                  <td><b class="blue2">-$ 2.50</b></td>
+                                </tr>
+                                <tr>
+                                  <td class="bn">总价：</td>
+                                  <td class="bn"><b class="f18">$ 22.50</b></td>
+                                </tr>
+                              </table>
+                         </div>
+                         <div class="w80"><a class="del"></a></div>
+                     </li>
+                     
+                     </ul>
+                     </div>
+                      <div class="cart_top cart_bottom">
+		                <span><input type="checkbox" id="checkbox-0" onclick="doSelectAll()" /><label for="checkbox-0">✔</label>全选 </span>
+		                <span class="sec"> </span>
+		                <span class="third"><a class="allDel">全部删除</a></span>
+             		 </div>
+             
+		             <div class="carTotal clearfix">
+		                 <p>合计（不含运费）：<b>$ 112.50</b></p>
+		                 <span>* 共优惠了<b>$ 7.50</b></span>
+		             </div>
+             
+		             <div class="btn pay">
+		                 <a href="order_confirm.html">
+		                 <input type="button" value="立即付款" class="fr"/></a>
+		             </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <include file="footer.html" /> -->
+<!-- <iframe src="footer.html" frameborder="0" width="100%" height="100%"></iframe> -->
+<div id="footer" class="clearfix carFooter">
+    <div class="img_list fl">
+        <img src="img/b6.jpg" alt="">
+        <img src="img/b7.jpg" alt="">
+        <img src="img/b8.jpg" alt="">
+        <img src="img/b9.jpg" alt="">
+        <img src="img/VISA.png" alt="">
+        <img src="img/b2.png" alt="">
+        <img src="img/b1.png" alt="">
+        <img src="img/b5.jpg" alt="">
+        <img src="img/cn.jpg" alt="">
+    </div>
+    <div class="footer_list fr">
+        <ul>
+            <li class="copyright"><span>Copyright© xxx All right reseved.</span></li>
+            <li class="notice"><a href="#">公告</a></li>
+            <li class="service"><a href="#">在线客服</a><img src="img/kefu.png" alt=""></li>
+        </ul>
+    </div>
+</div>
+<!-- 弹出 -->
+	<div class="code_mask_wrap"></div>
+	<div class="code_mask">
+		<div class="code_center">
+			<p class="code_header">
+				<span class="code_fill">温馨提示</span>
+				<a class="code_close code_cancel"></a>
+			</p>
+			<p class="main-text">删除后不可恢复，确认删除？</p>
+			<div class="code_btn">
+				<!-- <input type="submit" value="确定" class="ensure"> <--><a class="ensure">确认</a><input type="reset" class="code_cancel" value="取消">
+			</div>
+		</div>
+	</div>	
+	<script language="javascript">
+// 		function del_sure(){
+// 		var gnl=confirm("确定要删除?");
+// 		if (gnl==true){
+// 		return $(".thingList").css("display","none");
+// 		}else{
+// 		return false;
+// 		}
+// 	}
+// </script>
+</body>
+</html>
